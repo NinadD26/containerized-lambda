@@ -41,7 +41,7 @@ phases:
       - echo Pushing the Docker image...
       - docker push 381492211326.dkr.ecr.us-east-1.amazonaws.com/lambda-container-ecr:latest
       - echo Updating Lambda function...
-      - aws lambda update-function-code --function-name my-container-lambda --image-uri 381492211326.dkr.ecr.us-east-1.amazonaws.com/lambda-container-ecr:latest
+      - aws lambda update-function-code --function-name lambda_docker_container --image-uri 381492211326.dkr.ecr.us-east-1.amazonaws.com/lambda-container-ecr:latest
 artifacts:
   files: '**/*'
   discard-paths: yes
